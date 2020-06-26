@@ -1,0 +1,4 @@
+#include "Pods/Target Support Files/Pods-PersonalVPN/Pods-PersonalVPN.testing.xcconfig"
+PRODUCT_NAME = $(inherited) β
+API_BASE_URL = test.personalvpn.app/api/
+API_KEY =  A9sgh$FPJDew4E

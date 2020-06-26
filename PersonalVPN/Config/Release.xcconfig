@@ -1,0 +1,3 @@
+#include "Pods/Target Support Files/Pods-PersonalVPN/Pods-PersonalVPN.release.xcconfig"
+API_BASE_URL = personalvpn.app/api/
+API_KEY =  6kw4)18(K7F68@A

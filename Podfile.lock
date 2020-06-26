@@ -1,0 +1,58 @@
+PODS:
+  - Amplitude-iOS (4.10.0)
+  - lottie-ios (3.1.6)
+  - OpenSSL-Apple (1.1.1d.5a)
+  - RxCocoa (5.0.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.1)
+  - SwiftyBeaver (1.8.4)
+  - Swinject (2.7.1)
+  - TunnelKit (2.2.1):
+    - TunnelKit/Protocols/OpenVPN (= 2.2.1)
+  - TunnelKit/AppExtension (2.2.1):
+    - SwiftyBeaver
+    - TunnelKit/Core
+  - TunnelKit/Core (2.2.1):
+    - SwiftyBeaver
+  - TunnelKit/Protocols/OpenVPN (2.2.1):
+    - OpenSSL-Apple (~> 1.1.1d.5a)
+    - TunnelKit/AppExtension
+    - TunnelKit/Core
+
+DEPENDENCIES:
+  - Amplitude-iOS
+  - lottie-ios
+  - RxCocoa
+  - RxSwift
+  - Swinject
+  - TunnelKit
+
+SPEC REPOS:
+  trunk:
+    - Amplitude-iOS
+    - lottie-ios
+    - OpenSSL-Apple
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SwiftyBeaver
+    - Swinject
+    - TunnelKit
+
+SPEC CHECKSUMS:
+  Amplitude-iOS: 7d8cdc3408ba35c2e68368fc7c692cd104606b94
+  lottie-ios: 85ce835dd8c53e02509f20729fc7d6a4e6645a0a
+  OpenSSL-Apple: 2c9efbc94e0a1ada434cc197b02bd70052a82281
+  RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
+  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
+  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+  TunnelKit: 554b30f3a37387169d00be45d120fa8df6c8068e
+
+PODFILE CHECKSUM: 6968d45c7aaeb3d478a6d3cb470b5592d270d1fe
+
+COCOAPODS: 1.9.0
