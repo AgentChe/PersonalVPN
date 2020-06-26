@@ -1,24 +1,24 @@
 PODS:
   - Amplitude-iOS (4.10.0)
-  - lottie-ios (3.1.6)
-  - OpenSSL-Apple (1.1.1d.5a)
-  - RxCocoa (5.0.1):
+  - lottie-ios (3.1.8)
+  - OpenSSL-Apple (1.1.1g.6)
+  - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
-  - RxRelay (5.0.1):
+  - RxRelay (5.1.1):
     - RxSwift (~> 5)
-  - RxSwift (5.0.1)
-  - SwiftyBeaver (1.8.4)
+  - RxSwift (5.1.1)
+  - SwiftyBeaver (1.9.1)
   - Swinject (2.7.1)
-  - TunnelKit (2.2.1):
-    - TunnelKit/Protocols/OpenVPN (= 2.2.1)
-  - TunnelKit/AppExtension (2.2.1):
+  - TunnelKit (2.2.5):
+    - TunnelKit/Protocols/OpenVPN (= 2.2.5)
+  - TunnelKit/AppExtension (2.2.5):
     - SwiftyBeaver
     - TunnelKit/Core
-  - TunnelKit/Core (2.2.1):
+  - TunnelKit/Core (2.2.5):
     - SwiftyBeaver
-  - TunnelKit/Protocols/OpenVPN (2.2.1):
-    - OpenSSL-Apple (~> 1.1.1d.5a)
+  - TunnelKit/Protocols/OpenVPN (2.2.5):
+    - OpenSSL-Apple (~> 1.1.1g.6)
     - TunnelKit/AppExtension
     - TunnelKit/Core
 
@@ -31,7 +31,7 @@ DEPENDENCIES:
   - TunnelKit
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - Amplitude-iOS
     - lottie-ios
     - OpenSSL-Apple
@@ -44,15 +44,15 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Amplitude-iOS: 7d8cdc3408ba35c2e68368fc7c692cd104606b94
-  lottie-ios: 85ce835dd8c53e02509f20729fc7d6a4e6645a0a
-  OpenSSL-Apple: 2c9efbc94e0a1ada434cc197b02bd70052a82281
-  RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
-  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
-  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
-  SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
+  OpenSSL-Apple: c9c1b9c5b2b1fc4e1758fc5f0836b58ae7fd8183
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SwiftyBeaver: a1f5691458561414bcfab51874b2b7445451602b
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
-  TunnelKit: 554b30f3a37387169d00be45d120fa8df6c8068e
+  TunnelKit: 17c6af76028b29cc6ddc936160986a4d12e09266
 
-PODFILE CHECKSUM: 6968d45c7aaeb3d478a6d3cb470b5592d270d1fe
+PODFILE CHECKSUM: b5adc530793de750a8a65320a6e46f201ddab6d0
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.9.3

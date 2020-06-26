@@ -18,6 +18,7 @@ class MainCoordinator: BaseCoordinator<Void> {
         mainViewController.viewModel = viewModel
         window.rootViewController = mainViewController
         window.makeKeyAndVisible()
+        
         viewModel.more.subscribe(onNext: { [weak self] _ in
             let moreCoordinator = MoreCoordinator(rootViewController: mainViewController)
             self?.coordinate(to: moreCoordinator)
@@ -26,6 +27,7 @@ class MainCoordinator: BaseCoordinator<Void> {
             let locationCoordinator = LocationCoordinator(rootViewController: mainViewController)
             self?.coordinate(to: locationCoordinator)
         }).disposed(by: bag)
+        
         viewModel.handleFirstAppear
             .observeOn(MainScheduler.instance)
             .take(1)
@@ -41,6 +43,7 @@ class MainCoordinator: BaseCoordinator<Void> {
             let paygateCoordinator = PaygateCoordinator(rootViewController: mainViewController)
             self?.coordinate(to: paygateCoordinator)
         }).disposed(by: bag)
+        
         if (!UserDefaults.standard.bool(forKey: "privacy")) {
             let privacyCoordinator = PrivacyPolicyCoordinator(rootViewController: mainViewController, url: URL(string: LegalLinks.privacyPolicy.rawValue), buttonType: .accept, purchaseService: AppContainer.sharedContainer.container.resolve(PurchaseService.self)!)
             self.coordinate(to: privacyCoordinator).subscribe().disposed(by: bag)
