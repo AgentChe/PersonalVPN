@@ -9,6 +9,8 @@ target 'PersonalVPN' do
   pod 'Swinject'
   pod 'lottie-ios'
   pod 'Amplitude-iOS'
+  pod 'SwiftyStoreKit'
+  pod 'Alamofire'
 end
 
 target 'PVPN-NE' do

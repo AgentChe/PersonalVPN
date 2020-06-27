@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.1.0)
   - Amplitude-iOS (4.10.0)
   - lottie-ios (3.1.8)
   - OpenSSL-Apple (1.1.1g.6)
@@ -9,6 +10,7 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - SwiftyBeaver (1.9.1)
+  - SwiftyStoreKit (0.15.0)
   - Swinject (2.7.1)
   - TunnelKit (2.2.5):
     - TunnelKit/Protocols/OpenVPN (= 2.2.5)
@@ -23,15 +25,18 @@ PODS:
     - TunnelKit/Core
 
 DEPENDENCIES:
+  - Alamofire
   - Amplitude-iOS
   - lottie-ios
   - RxCocoa
   - RxSwift
+  - SwiftyStoreKit
   - Swinject
   - TunnelKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Alamofire
     - Amplitude-iOS
     - lottie-ios
     - OpenSSL-Apple
@@ -39,10 +44,12 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SwiftyBeaver
+    - SwiftyStoreKit
     - Swinject
     - TunnelKit
 
 SPEC CHECKSUMS:
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   Amplitude-iOS: 7d8cdc3408ba35c2e68368fc7c692cd104606b94
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   OpenSSL-Apple: c9c1b9c5b2b1fc4e1758fc5f0836b58ae7fd8183
@@ -50,9 +57,10 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SwiftyBeaver: a1f5691458561414bcfab51874b2b7445451602b
+  SwiftyStoreKit: 033d06b6f87955405d3f844a18a7687c2438592a
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   TunnelKit: 17c6af76028b29cc6ddc936160986a4d12e09266
 
-PODFILE CHECKSUM: b5adc530793de750a8a65320a6e46f201ddab6d0
+PODFILE CHECKSUM: e69109e0bebd629cd7cb97dfd03f58e687ad2fb1
 
 COCOAPODS: 1.9.3

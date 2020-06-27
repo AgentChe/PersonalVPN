@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErrorView" customModule="SleepWell" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="iN0-l3-epB" id="AEg-ZW-kq0"/>
+                <outlet property="messageLabel" destination="gXD-JN-wpa" id="a9C-yp-XuZ"/>
+                <outlet property="tryAgainButton" destination="rrO-s0-1xW" id="YRv-3t-jIB"/>
+                <outlet property="tryAgainLabel" destination="qGA-Is-734" id="eDk-YZ-dYN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P5d-yM-4sP">
+                    <rect key="frame" x="26" y="60" width="362" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXD-JN-wpa">
+                            <rect key="frame" x="36" y="32" width="290" height="0.0"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGA-Is-734">
+                            <rect key="frame" x="181" y="32" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrO-s0-1xW">
+                            <rect key="frame" x="0.0" y="0.0" width="362" height="64"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="gXD-JN-wpa" firstAttribute="top" secondItem="P5d-yM-4sP" secondAttribute="top" constant="32" id="7Tb-9Y-H82"/>
+                        <constraint firstAttribute="trailing" secondItem="gXD-JN-wpa" secondAttribute="trailing" constant="36" id="Icg-vW-qpQ"/>
+                        <constraint firstItem="qGA-Is-734" firstAttribute="centerX" secondItem="P5d-yM-4sP" secondAttribute="centerX" id="MBg-Nc-Ghk"/>
+                        <constraint firstAttribute="bottom" secondItem="rrO-s0-1xW" secondAttribute="bottom" id="OyC-7d-CiX"/>
+                        <constraint firstAttribute="bottom" secondItem="qGA-Is-734" secondAttribute="bottom" constant="32" id="VGO-IE-iJQ"/>
+                        <constraint firstItem="rrO-s0-1xW" firstAttribute="leading" secondItem="P5d-yM-4sP" secondAttribute="leading" id="ZEy-Br-sJQ"/>
+                        <constraint firstItem="gXD-JN-wpa" firstAttribute="leading" secondItem="P5d-yM-4sP" secondAttribute="leading" constant="36" id="bLi-gS-gXo"/>
+                        <constraint firstAttribute="trailing" secondItem="rrO-s0-1xW" secondAttribute="trailing" id="oME-vg-lTS"/>
+                        <constraint firstItem="qGA-Is-734" firstAttribute="top" secondItem="gXD-JN-wpa" secondAttribute="bottom" id="siE-xr-qAF"/>
+                        <constraint firstItem="rrO-s0-1xW" firstAttribute="top" secondItem="P5d-yM-4sP" secondAttribute="top" id="uRg-Tb-1xV"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="P5d-yM-4sP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="26" id="Kf8-SP-yXW"/>
+                <constraint firstItem="P5d-yM-4sP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="LYT-JQ-Ica"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="P5d-yM-4sP" secondAttribute="trailing" constant="26" id="cYb-3K-fEa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
+        </view>
+    </objects>
+</document>
