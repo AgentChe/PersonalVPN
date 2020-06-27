@@ -13,12 +13,7 @@ class MoreCoordinator: BaseCoordinator<Void> {
 
     override func start() -> Observable<Void> {
         let viewController = MoreViewController()
-        let container = AppContainer.sharedContainer.container
-        let viewModel = MoreViewModel(
-            storage: UserDefaultsStorage.shared,
-            payment: container.resolve(OldPurchaseService.self)!,
-            client: ClientContainer.sharedContainer.container.resolve(Client.self)! as! PaymentsClient
-        )
+        let viewModel = MoreViewModel()
         viewModel
             .handleItem
             .subscribe(onNext: { [weak self] item in

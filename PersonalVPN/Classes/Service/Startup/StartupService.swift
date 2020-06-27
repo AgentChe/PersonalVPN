@@ -1,41 +1,35 @@
 import Foundation
 import os
 import Amplitude_iOS
+import RxSwift
 
 class StartupService {
-    let client: CheckClient & PaymentsClient & VpnClient
+    let client: CheckClient & VpnClient
     var storage: Storage
     var attributionService: AttributionService
+    
+    private var purchaseValidateDisposable: Disposable?
 
-    init(client: CheckClient & PaymentsClient & VpnClient, storage: Storage, attributionService: AttributionService) {
+    init(client: CheckClient & VpnClient, storage: Storage, attributionService: AttributionService) {
         self.client = client
         self.storage = storage
         self.attributionService = attributionService
         self.storage.addObserver(self)
-        NotificationCenter.default.addObserver(
-                forName: .PurchaseServiceNotification,
-                object: nil,
-                queue: OperationQueue.main
-        ) { [weak self] notification in
-            if let error = notification.userInfo?["error"] as? Error {
-                NotificationCenter.default.post(name: .PurchaseCompleteValidationNotification, object: nil, userInfo: ["error": error])
-            }
-            else {
-                self?.validate()
-            }
-        }
     }
 
     func coldStart() {
         Amplitude.instance().initializeApiKey(App.Amplitude.ApiKey)
+        
         if storage.isFirstLaunch {
             Amplitude.instance().setUserProperties(App.Amplitude.firstLaunchParams(for: AttributionService.idfa))
             Amplitude.instance().logEvent(App.Amplitude.FirstLaunchEvent, withEventProperties: App.Amplitude.EventParams)
+            
             attributionService.register { [weak self] (params, attribution) in
                 if attribution {
                     Amplitude.instance().setUserProperties(params)
                     Amplitude.instance().logEvent(App.Amplitude.SearchAdsInstall, withEventProperties: App.Amplitude.EventParams)
                 }
+                
                 self?.storage.isFirstLaunch = false
             }
         }
@@ -47,29 +41,34 @@ class StartupService {
                 self?.storage.needPayment = r.needPayment
                 self?.storage.userId = r.userId
             }
+            
             self?.loadNecessaryInfo()
         }
+        
         client.checkToken { [weak self] response, error in
-            if let _ = error {
-                self?.requestToken(completion)
-                return
+            DispatchQueue.main.async {
+                if let _ = error {
+                    self?.requestToken(completion)
+                    return
+                }
+                else {
+                    self?.attributionService.setUserInfo(full: false) { }
+                }
+                
+                completion(response)
             }
-            else {
-                self?.attributionService.setUserInfo(full: false) { }
-            }
-            completion(response)
         }
     }
 
     private func requestToken(_ completion: @escaping (CheckTokenResponse?) -> ()) {
-        client.validate(receipt: AppProducts.receipt) { response, error in
-            if let error = error {
-                os_log("Fail to validate receipt with error %s", error.localizedDescription)
-                print("Fail to validate receipt with error \(error)")
-//                return
-            }
-            completion(response)
-        }
+        purchaseValidateDisposable?.dispose()
+        
+        purchaseValidateDisposable = PurchaseService
+            .paymentValidate()
+            .asDriver(onErrorJustReturn: nil)
+            .drive(onNext: { response in
+                completion(response)
+            })
     }
 
     private func loadNecessaryInfo() {
@@ -87,27 +86,6 @@ class StartupService {
             if self?.storage.selectedVpn == nil {
                 self?.storage.selectedVpn = servers?.first
             }
-        }
-    }
-}
-
-extension StartupService {
-    private func validate() {
-        client.validate(receipt: AppProducts.receipt) { [weak self] response, error in
-            if let response = response {
-                NetworkConfiguration.userToken = response.userToken
-                self?.storage.activeSubscription = response.activeSubscription
-                self?.storage.needPayment = response.needPayment
-                self?.storage.userId = response.userId
-            }
-            else if let error = error, case ApiClientError.sameRequestInQueue = error {
-                print("Validation restore in process")
-                return
-            } else {
-                print("Empty response!")
-            }
-            let userInfo = error != nil ? ["error": error] : [:]
-            NotificationCenter.default.post(name: .PurchaseCompleteValidationNotification, object: nil, userInfo: userInfo)
         }
     }
 }

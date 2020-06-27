@@ -13,11 +13,6 @@ protocol CheckClient {
     func checkToken(_ completion: @escaping (CheckResponse) -> ())
 }
 
-protocol PaymentsClient {
-    func validate(receipt: String, completion: @escaping (CheckResponse) -> ())
-    func paygate(completion: @escaping (Response<PaygateResponse>) -> ())
-}
-
 protocol VpnClient {
     func list(_ completion: @escaping ([VpnServer]?, ApiClientError?) -> ())
     func configuration(vpnId: String, completion: @escaping ((Bool, String?)?, ApiClientError?) -> ())
@@ -164,20 +159,10 @@ extension APIClient: UserClient {
     }
 }
 
-extension APIClient: CheckClient, PaymentsClient {
+extension APIClient: CheckClient {
     func checkToken(_ completion: @escaping (CheckResponse) -> ()) {
         let tokenApi = CheckEndpoints.userToken(token: token)
         request(tokenApi, completion: handleResponse(with: completion))
-    }
-
-    func validate(receipt: String, completion: @escaping (CheckResponse) -> ()) {
-        let validateApi = PaymentEndpoints.validate(receipt: receipt, version: nil)
-        request(validateApi, completion: handleResponse(with: completion))
-    }
-
-    func paygate(completion: @escaping (Response<PaygateResponse>) -> ()) {
-        let paygateApi = PaymentEndpoints.paygate(version: App.version)
-        request(paygateApi, completion: handle(with: completion))
     }
 
     private func handleResponse(with completion: @escaping (CheckResponse) -> ()) -> (ClientResponse) -> () {

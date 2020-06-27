@@ -14,7 +14,9 @@ struct CheckTokenResponse: ResponseProtocol {
     let userToken: String
     let activeSubscription: Bool
     let userId: String?
+}
 
+extension CheckTokenResponse {
     init(rawResponse: Dictionary<String, AnyObject>) throws {
         let _userToken: String? = rawResponse["user_token"] as? String
         let _activeSubscription: Bool? = rawResponse["active_subscription"] as? Bool

@@ -58,6 +58,8 @@
 		96BEA65624A6A82700B94B55 /* ApiRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BEA65524A6A82700B94B55 /* ApiRequestBody.swift */; };
 		96BEA65824A6A84200B94B55 /* GetPaygateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BEA65724A6A84200B94B55 /* GetPaygateRequest.swift */; };
 		96BEA65C24A6A86600B94B55 /* GlobalDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BEA65B24A6A86600B94B55 /* GlobalDefinitions.swift */; };
+		96BEA65E24A7D0AE00B94B55 /* PurchaseValidateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BEA65D24A7D0AE00B94B55 /* PurchaseValidateRequest.swift */; };
+		96BEA66024A7D34C00B94B55 /* CheckTokenResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BEA65F24A7D34C00B94B55 /* CheckTokenResponseMapper.swift */; };
 		C46AC02D6D2E1713198F1AEF /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ACC6FF69E4BE47070CAD6 /* MoreViewController.swift */; };
 		C46AC05E3B6D48BF1FDAA9DD /* AttributionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ACCD53D90BD2BBF712DB4 /* AttributionService.swift */; };
 		C46AC06CA4C297476AB65EC4 /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46AC7D16C1AEF1AF0A9EDFD /* NetworkConfiguration.swift */; };
@@ -73,7 +75,6 @@
 		C46AC2E3B175AEFDAE42BE8C /* CheckTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46AC23552FE18332FECE120 /* CheckTokenResponse.swift */; };
 		C46AC33DF94F5D451D484E87 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C46ACBB0544C817005AF142B /* Poppins-SemiBold.ttf */; };
 		C46AC43D5336D5C3D67B719E /* ClientContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ACC1F8C8628E03875F079 /* ClientContainer.swift */; };
-		C46AC4539D251845EA13CDD5 /* OldPurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ACC75D32F23EB9A914C0A /* OldPurchaseService.swift */; };
 		C46AC49A8CA156239C34A5FB /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C46AC6C233CC34ED5FC5057A /* Poppins-Bold.ttf */; };
 		C46AC4B0A3D5320B39B04CC3 /* ResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46AC09BF89CFBA666C92B24 /* ResponseProtocol.swift */; };
 		C46AC4C8928F736EA5F01404 /* PaygateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46AC5C7C6C8CDEA8A517715 /* PaygateCoordinator.swift */; };
@@ -84,7 +85,6 @@
 		C46AC571C4547305543EA67A /* VpnServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ACBF0D9654B842AB46A91 /* VpnServer.swift */; };
 		C46AC5B66D02331B76BB3386 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46AC6C86809FFEA512EB746 /* PrivacyPolicyViewController.swift */; };
 		C46AC5BF3602BA6734AC6F64 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ACD972C0C64239C92CFC1 /* AppData.swift */; };
-		C46AC5EBE0BB5888BD67942F /* AppProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ACD59303E00C7156F6AFA /* AppProducts.swift */; };
 		C46AC638652E3E36D0266EEA /* ServerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46AC5635E91AC0FBB8E19BA /* ServerListViewModel.swift */; };
 		C46AC6C0FF3A67AB55715893 /* OnboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46ACA6CDDEFF32EC4BDCFFA /* OnboardViewModel.swift */; };
 		C46AC75F2918FC9ABD14531E /* LegalLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46AC7723C2156CD589F82D4 /* LegalLinks.swift */; };
@@ -203,6 +203,8 @@
 		96BEA65524A6A82700B94B55 /* ApiRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestBody.swift; sourceTree = "<group>"; };
 		96BEA65724A6A84200B94B55 /* GetPaygateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPaygateRequest.swift; sourceTree = "<group>"; };
 		96BEA65B24A6A86600B94B55 /* GlobalDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalDefinitions.swift; sourceTree = "<group>"; };
+		96BEA65D24A7D0AE00B94B55 /* PurchaseValidateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseValidateRequest.swift; sourceTree = "<group>"; };
+		96BEA65F24A7D34C00B94B55 /* CheckTokenResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckTokenResponseMapper.swift; sourceTree = "<group>"; };
 		A944D983C7F9EA45EB1FD37F /* Pods-PVPN-NE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PVPN-NE.release.xcconfig"; path = "Target Support Files/Pods-PVPN-NE/Pods-PVPN-NE.release.xcconfig"; sourceTree = "<group>"; };
 		C46AC027804F4CC3C5E41E75 /* PaygateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaygateResponse.swift; sourceTree = "<group>"; };
 		C46AC0535AB443F96AA080CB /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
@@ -246,10 +248,8 @@
 		C46ACBF0D9654B842AB46A91 /* VpnServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VpnServer.swift; sourceTree = "<group>"; };
 		C46ACC1F8C8628E03875F079 /* ClientContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientContainer.swift; sourceTree = "<group>"; };
 		C46ACC6FF69E4BE47070CAD6 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		C46ACC75D32F23EB9A914C0A /* OldPurchaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldPurchaseService.swift; sourceTree = "<group>"; };
 		C46ACCD53D90BD2BBF712DB4 /* AttributionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributionService.swift; sourceTree = "<group>"; };
 		C46ACD473F751267A9B988C2 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		C46ACD59303E00C7156F6AFA /* AppProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppProducts.swift; sourceTree = "<group>"; };
 		C46ACD972C0C64239C92CFC1 /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		C46ACD9D9E5F2A5CA38AE498 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		C46ACDC5D173BE8FCD0DA0FA /* StartupService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupService.swift; sourceTree = "<group>"; };
@@ -358,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				96B7D50524A67ED400AA2306 /* Paygate */,
+				96BEA65F24A7D34C00B94B55 /* CheckTokenResponseMapper.swift */,
 			);
 			path = Transformation;
 			sourceTree = "<group>";
@@ -546,6 +547,7 @@
 			children = (
 				96BEA65524A6A82700B94B55 /* ApiRequestBody.swift */,
 				96BEA65724A6A84200B94B55 /* GetPaygateRequest.swift */,
+				96BEA65D24A7D0AE00B94B55 /* PurchaseValidateRequest.swift */,
 			);
 			path = RequestBody;
 			sourceTree = "<group>";
@@ -586,20 +588,10 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		C46AC1CC76451CF58C98AB97 /* OldPurchase */ = {
-			isa = PBXGroup;
-			children = (
-				C46ACC75D32F23EB9A914C0A /* OldPurchaseService.swift */,
-				C46ACD59303E00C7156F6AFA /* AppProducts.swift */,
-			);
-			path = OldPurchase;
-			sourceTree = "<group>";
-		};
 		C46AC2263C3C72C81CE6741E /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				96B7D50A24A6846600AA2306 /* Purchase */,
-				C46AC1CC76451CF58C98AB97 /* OldPurchase */,
 				C46AC2EB8DB3ECCFF7E339DC /* Startup */,
 				C46AC36767C35443554C6BCE /* Tunnel */,
 				C46ACE3C465F455A63174C7E /* Storage */,
@@ -1032,8 +1024,6 @@
 				C46AC9945DEF6C413A20EBB4 /* StartupService.swift in Sources */,
 				96B7D52624A68FF200AA2306 /* PurchaseError.swift in Sources */,
 				96B7D51124A6846700AA2306 /* PurchaseService.swift in Sources */,
-				C46AC4539D251845EA13CDD5 /* OldPurchaseService.swift in Sources */,
-				C46AC5EBE0BB5888BD67942F /* AppProducts.swift in Sources */,
 				C46AC999CCD53C40B58F7A11 /* APIClient.swift in Sources */,
 				96B7D50824A67ED400AA2306 /* Paygate.swift in Sources */,
 				96B7D52C24A69EAF00AA2306 /* PaygateViewModel.swift in Sources */,
@@ -1059,6 +1049,7 @@
 				C46ACA6B4C25446A2BAAA64D /* MainViewController.swift in Sources */,
 				96B7D53224A69FAD00AA2306 /* PaygateMainView.swift in Sources */,
 				96B7D51024A6846700AA2306 /* ProductPrice.swift in Sources */,
+				96BEA65E24A7D0AE00B94B55 /* PurchaseValidateRequest.swift in Sources */,
 				96B7D53D24A6A07C00AA2306 /* ErrorView.swift in Sources */,
 				96BEA64E24A6A50F00B94B55 /* PaygateService.swift in Sources */,
 				96BEA65C24A6A86600B94B55 /* GlobalDefinitions.swift in Sources */,
@@ -1079,6 +1070,7 @@
 				96B7D53424A69FAD00AA2306 /* PaygateView.swift in Sources */,
 				C46ACF8FE427D03AA4747ADE /* ServerListViewController.swift in Sources */,
 				C46AC638652E3E36D0266EEA /* ServerListViewModel.swift in Sources */,
+				96BEA66024A7D34C00B94B55 /* CheckTokenResponseMapper.swift in Sources */,
 				96BEA65324A6A79400B94B55 /* RestApiTransport.swift in Sources */,
 				C46AC8927CA17385E62FDA69 /* LocationCoordinator.swift in Sources */,
 				C46ACEF7EC2B0A5605C1D185 /* UIViewController+Rx.swift in Sources */,

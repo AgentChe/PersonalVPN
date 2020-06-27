@@ -9,12 +9,10 @@ enum OnboardCoordinationResult {
 
 class OnboardCoordinator: BaseCoordinator<Void> {
     private let rootViewController: UIViewController
-    private let purchaseService: OldPurchaseService
     private let bag = DisposeBag()
 
-    init(viewController: UIViewController, purchaseService: OldPurchaseService) {
+    init(viewController: UIViewController) {
         self.rootViewController = viewController
-        self.purchaseService = purchaseService
     }
 
     override func start() -> Observable<Void> {
@@ -25,7 +23,6 @@ class OnboardCoordinator: BaseCoordinator<Void> {
         viewModel
             .didAccept
             .subscribe(onNext: { [weak self] _ in
-                self?.purchaseService.continueProcessingPayment()
                 UserDefaults.standard.set(true, forKey: "privacy")
                 self?.rootViewController.dismiss(animated: true)
             })

@@ -58,43 +58,6 @@ extension CheckEndpoints: Endpoint {
     }
 }
 
-enum PaymentEndpoints {
-    case paygate(version: String)
-    case validate(receipt: String, version: String?)
-}
-
-extension PaymentEndpoints: Endpoint {
-    var endpoint: String {
-        switch self {
-        case .paygate(_): return "payments/paygate"
-        case .validate(_, _): return "payments/validate"
-        }
-    }
-
-    var params: HTTPParams? {
-        var header = HTTPParams.defaultParams
-        switch self {
-        case .paygate(let version):
-            header["version"] = version
-            break
-        case .validate(let receipt, let version):
-            header["version"] = version
-            header["receipt"] = receipt
-            break
-        }
-        return header
-    }
-
-    var httpMethod: HTTPMethod {
-        switch self {
-        case .paygate:
-             return .get
-        case .validate:
-            return .post
-        }
-    }
-}
-
 enum VpnEndpoints {
     case list
     case configuration(vpnId: String)

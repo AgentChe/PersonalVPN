@@ -61,24 +61,22 @@ extension PurchaseService {
 
 extension PurchaseService {
     static func paymentValidate(receipt: String) -> Single<CheckTokenResponse?> {
-        Single<CheckTokenResponse?>
-            .create { event in
-                guard let client = ClientContainer.sharedContainer.container.resolve(Client.self) as? (CheckClient & PaymentsClient & VpnClient) else {
-                    event(.success(nil))
-                    return Disposables.create()
-                }
-                
-                client.validate(receipt: receipt) { response, _ in
-                    event(.success(response))
-                }
-                
-                return Disposables.create()
-            }
+        guard let receipt = getReceipt() else {
+            return .deferred { .just(nil) }
+        }
+        
+        let request = PurchaseValidateRequest(receipt: receipt,
+                                              userToken: NetworkConfiguration.userToken,
+                                              version: UIDevice.appVersion ?? "1")
+        
+        return RestAPITransport()
+            .callServerApi(requestBody: request)
+            .map { CheckTokenResponseMapper.map(from: $0) }
             .do(onSuccess: { response in
                 guard let response = response else {
                     return
                 }
-                
+
                 NetworkConfiguration.userToken = response.userToken
                 UserDefaultsStorage.shared.activeSubscription = response.activeSubscription
                 UserDefaultsStorage.shared.needPayment = response.needPayment
@@ -87,7 +85,7 @@ extension PurchaseService {
     }
     
     static func paymentValidate() -> Single<CheckTokenResponse?> {
-        return receipt
+        receipt
             .flatMap { receiptBase64 -> Single<CheckTokenResponse?> in
                 guard let receipt = receiptBase64 else {
                     return .just(nil)
@@ -132,5 +130,9 @@ extension PurchaseService {
             
             return Disposables.create()
         }
+    }
+    
+    static func getReceipt() -> String? {
+        SwiftyStoreKit.localReceiptData?.base64EncodedString()
     }
 }

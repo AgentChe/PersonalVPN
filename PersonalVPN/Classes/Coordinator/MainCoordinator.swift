@@ -47,7 +47,7 @@ class MainCoordinator: BaseCoordinator<Void> {
         }).disposed(by: bag)
         
         if (!UserDefaults.standard.bool(forKey: "privacy")) {
-            let privacyCoordinator = PrivacyPolicyCoordinator(rootViewController: mainViewController, url: URL(string: LegalLinks.privacyPolicy.rawValue), buttonType: .accept, purchaseService: AppContainer.sharedContainer.container.resolve(OldPurchaseService.self)!)
+            let privacyCoordinator = PrivacyPolicyCoordinator(rootViewController: mainViewController, url: URL(string: LegalLinks.privacyPolicy.rawValue), buttonType: .accept)
             self.coordinate(to: privacyCoordinator).subscribe().disposed(by: bag)
         }
         return Observable.never()

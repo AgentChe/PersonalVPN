@@ -9,19 +9,7 @@ import RxSwift
 import RxCocoa
 
 class MoreViewController: UIViewController {
-    var viewModel: MoreViewModel! {
-        didSet {
-            viewModel.alertMessage
-                .observeOn(MainScheduler.instance)
-                .subscribe(onNext: { [weak self] in self?.presentAlert(message: $0) })
-                .disposed(by: disposeBag)
-            viewModel.activity
-                .asObservable()
-                .observeOn(MainScheduler.instance)
-                .bind(to: activityIndicator.rx.isAnimating)
-                .disposed(by: disposeBag)
-        }
-    }
+    var viewModel: MoreViewModel!
 
     private let disposeBag = DisposeBag()
 
@@ -87,11 +75,24 @@ class MoreViewController: UIViewController {
                 self?.setupCell(cell, viewModel: viewModel)
             }
             .disposed(by: disposeBag)
+        
         tableView
             .rx
             .modelSelected(ItemViewModel.self)
-//            .filter { model in model.kind != .restorePurchases }
-            .bind(to: viewModel.selectItem)
+            .do(onNext: { [weak self] item in
+                self?.viewModel.handleItem.accept(item)
+            })
+            .filter { $0.kind == .restorePurchases }
+            .do(onNext: { [weak self] _ in
+                self?.activityIndicator.startAnimating()
+            })
+            .flatMapLatest { _ in
+                PurchaseService.paymentValidate()
+            }
+            .asDriver(onErrorJustReturn: nil)
+            .drive(onNext: { [weak self] _ in
+                self?.activityIndicator.stopAnimating()
+            })
             .disposed(by: disposeBag)
     }
 

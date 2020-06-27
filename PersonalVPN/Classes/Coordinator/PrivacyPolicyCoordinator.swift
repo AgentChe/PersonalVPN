@@ -20,14 +20,12 @@ class PrivacyPolicyCoordinator: BaseCoordinator<Void> {
     let url: URL?
     private let rootViewController: UIViewController
     private let buttonType: PrivacyButtonType
-    private let purchaseService: OldPurchaseService?
     private let bag = DisposeBag()
 
-    init(rootViewController: UIViewController, url: URL?, buttonType: PrivacyButtonType, purchaseService: OldPurchaseService? = nil) {
+    init(rootViewController: UIViewController, url: URL?, buttonType: PrivacyButtonType) {
         self.rootViewController = rootViewController
         self.url = url
         self.buttonType = buttonType
-        self.purchaseService = purchaseService
     }
 
     override func start() -> Observable<Void> {
@@ -39,7 +37,6 @@ class PrivacyPolicyCoordinator: BaseCoordinator<Void> {
         viewModel
             .didAccept
             .subscribe(onNext: { [weak self] _ in
-            self?.purchaseService?.continueProcessingPayment()
             self?.rootViewController.dismiss(animated: true)
         })
         .disposed(by: bag)
