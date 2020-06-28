@@ -1187,7 +1187,7 @@
 				BUILD = TESTING;
 				CODE_SIGN_ENTITLEMENTS = PersonalVPN/PersonalVPN.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 34;
 				DEVELOPMENT_TEAM = W644U2Y4YS;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1197,7 +1197,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.73;
+				MARKETING_VERSION = 1.74;
 				PRODUCT_BUNDLE_IDENTIFIER = app.yourpersonalvpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = PersonalVPN_Dev;
@@ -1212,7 +1212,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "PVPN-NE/PVPN_NE.entitlements";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 34;
 				DEVELOPMENT_TEAM = W644U2Y4YS;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "PVPN-NE/Info.plist";
@@ -1222,7 +1222,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.73;
+				MARKETING_VERSION = 1.74;
 				PRODUCT_BUNDLE_IDENTIFIER = app.yourpersonalvpn.PVPNNE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = PersonalVPN_PVPNNE_Dev;
@@ -1239,7 +1239,7 @@
 				CODE_SIGN_ENTITLEMENTS = "PVPN-NE/PVPN_NE.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 34;
 				DEVELOPMENT_TEAM = W644U2Y4YS;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "PVPN-NE/Info.plist";
@@ -1249,7 +1249,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.73;
+				MARKETING_VERSION = 1.74;
 				PRODUCT_BUNDLE_IDENTIFIER = app.yourpersonalvpn.PVPNNE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = PersonalVPN_PVPNNE_Distr;
@@ -1265,7 +1265,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "PVPN-NE/PVPN_NE.entitlements";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 34;
 				DEVELOPMENT_TEAM = W644U2Y4YS;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "PVPN-NE/Info.plist";
@@ -1275,7 +1275,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.73;
+				MARKETING_VERSION = 1.74;
 				PRODUCT_BUNDLE_IDENTIFIER = app.yourpersonalvpn.PVPNNE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = PersonalVPN_PVPNNE_Dev;
@@ -1411,7 +1411,7 @@
 				BUILD = DEBUG;
 				CODE_SIGN_ENTITLEMENTS = PersonalVPN/PersonalVPN.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 34;
 				DEVELOPMENT_TEAM = W644U2Y4YS;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1421,7 +1421,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.73;
+				MARKETING_VERSION = 1.74;
 				PRODUCT_BUNDLE_IDENTIFIER = app.yourpersonalvpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = PersonalVPN_Dev;
@@ -1440,7 +1440,7 @@
 				CODE_SIGN_ENTITLEMENTS = PersonalVPN/PersonalVPN.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 34;
 				DEVELOPMENT_TEAM = W644U2Y4YS;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1450,7 +1450,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.73;
+				MARKETING_VERSION = 1.74;
 				PRODUCT_BUNDLE_IDENTIFIER = app.yourpersonalvpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = PersonalVPN_Distr;
