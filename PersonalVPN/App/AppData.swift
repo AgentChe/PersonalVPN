@@ -63,11 +63,11 @@ extension Bundle {
     var amplitudeApiKey: String {
         switch BuildSetting.currentBuild {
         case .debug:
-            return "dde6c038a32c3082b6debe249fad5d34"
+            return ""
         case .release:
-            return "b503251969f4b1d7901d2f7d1388d476"
+            return ""
         case .testing:
-            return "dde6c038a32c3082b6debe249fad5d34"
+            return ""
         }
     }
 }
